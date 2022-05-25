@@ -29,19 +29,19 @@ public class StringParser {
     }
 
     public StringParser(String si) {
-        string =si;
+        string = si;
     }
 
-    public static int toInt(String si) throws NoValidateTipExeption{
+    public static int toInt(String si) throws NoValidateTipExeption {
         if (Main.romanR == Main.romantoarab.Arab) {
             return Integer.parseInt(si);
-        } else if (Main.romanR == Main.romantoarab.Rom){
+        } else if (Main.romanR == Main.romantoarab.Rom) {
             return romanToArabic(si);
-        } else throw new  NoValidateTipExeption("НЕ УСТАНОВЛЕН ТИП ЧИСЛА:"+si);
+        } else throw new NoValidateTipExeption("Не устновлен тип:" + si);
     }
 
-    public static Main.Action toAction(String si){
-        switch (si){
+    public static Main.Action toAction(String si) {
+        switch (si) {
             case "+":
                 return Main.Action.Plus;
             case "-":
@@ -56,7 +56,7 @@ public class StringParser {
     }
 
 
-    private static int romanToArabic(String input) throws NoValidateTipExeption{
+    private static int romanToArabic(String input) throws NoValidateTipExeption {
         String romNum = input.toUpperCase();
         int result = 0;
 
@@ -75,9 +75,31 @@ public class StringParser {
         }
 
         if (romNum.length() > 0) {
-            throw new  NoValidateTipExeption("НЕ распознала, как РИМСКИЕ:"+input);
+            throw new NoValidateTipExeption("НЕ распознала, как РИМСКИЕ:" + input);
         }
+
 
         return result;
     }
+
+    public static String arabToRoman(int arabresult) throws NoValidateTipExeption {
+        if ((arabresult <= 0) || arabresult > 100) {
+            throw new NoValidateTipExeption(arabresult + " в римской системе нет отрицательных чисел");
+        }
+        List <RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
+        int i = 0;
+        StringBuilder stringBuilder = new StringBuilder();
+        while ((arabresult>0) && (i<romanNumerals.size())){
+            RomanNumeral thisSymbol = romanNumerals.get(i);
+            if(thisSymbol.getVlues()<=arabresult){
+                stringBuilder.append(thisSymbol.name());
+                arabresult -= thisSymbol.getVlues();
+            }
+            else {
+                i++;
+            }
+        }
+        return stringBuilder.toString();
+    }
 }
+
