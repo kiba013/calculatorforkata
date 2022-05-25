@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d0c0fdf-9df4-45b9-bdd6-42ccfb5b3e27" name="Changes" comment="gg">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringParser.java" afterDir="false" />
-    </list>
+    <list default="true" id="0d0c0fdf-9df4-45b9-bdd6-42ccfb5b3e27" name="Changes" comment="gg" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +57,21 @@
       <option name="presentableId" value="Default" />
       <updated>1653225741284</updated>
     </task>
+    <task id="LOCAL-00001" summary="gg">
+      <created>1653519456627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653519456627</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gg">
+      <created>1653519677118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653519677118</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
